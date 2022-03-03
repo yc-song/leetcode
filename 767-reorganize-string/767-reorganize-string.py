@@ -8,7 +8,7 @@ class Solution:
         counting_dict = dict() # sorted(list, reverse=True, key=list.count) does not work...
         loop=0
 
-# dictionary whose key is character and value is count -> which can be substituted for counter
+# dictionary whose key is character and value is count -> which can be substitued for counter
         for elem in s:
             try:
                 counting_dict[elem] += 1
