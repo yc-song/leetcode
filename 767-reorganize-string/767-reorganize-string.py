@@ -1,5 +1,5 @@
 """
-Squeezing number into the value with maximum counts returns
+Squeezing number betweens the characters with maximum counts returns
 the string without any adjacent characters
 """
 
@@ -10,14 +10,14 @@ class Solution:
         counting_dict = dict()
         loop = 0
 
-        # 1 dictionary whose key is character and value is count
+        # 1 dictionary whose key and value is character and count each.
         for elem in s:
             try:
                 counting_dict[elem] += 1
             except KeyError:
                 counting_dict[elem] = 1
 
-        # 2 list is reformatted into the list which is sorted by count of characters.
+        # 2 list is reformatted into the list which is sorted by counts of characters.
         while counting_dict:
             key = max(counting_dict, key=counting_dict.get)
             for j in range(0, counting_dict[key]):
@@ -28,7 +28,7 @@ class Solution:
         max_count = s.count(s[0])
 
         """#3 if the maximum value of count is greater than that of others, 
-        there's no mean to get desirable results."""
+        there's no means to get desirable results."""
 
         if loop - max_count < max_count - 1:
             return ""
