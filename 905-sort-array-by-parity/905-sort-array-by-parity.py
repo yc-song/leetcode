@@ -1,23 +1,24 @@
-# from collections import deque
+"""
+in
+"""
+
 
 class Solution(object):
-    
-    def sortArrayByParity(self, nums):
-        beginning_index, end_index = (
+    def sortArrayByParity(self, nums) -> list:
+        left_index, right_index = (
             0,
             len(nums) - 1,
         )
-        while beginning_index < end_index:
-            if nums[beginning_index] % 2:
-                if not nums[end_index] % 2:
-                    nums[beginning_index], nums[end_index] = (
-                        nums[end_index],
-                        nums[beginning_index],
+        while left_index < right_index:
+            if nums[left_index] % 2:  # odd
+                if not nums[right_index] % 2:  # even
+                    nums[left_index], nums[right_index] = (
+                        nums[right_index],
+                        nums[left_index],
                     )
-                    beginning_index += 1  
-                end_index -= 1  
+                    # swap happens when odd is at the left end and even is at the right end
+                    left_index += 1
+                right_index -= 1  # end index moves leaving odd integer intact
             else:
-                beginning_index += 1  
+                left_index += 1  #
         return nums
-
-        
