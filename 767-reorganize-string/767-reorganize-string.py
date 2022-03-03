@@ -27,7 +27,7 @@ class Solution:
 
         max_count = s.count(s[0])
 
-        """#3 if the maximum value of count is bigger than that of others, 
+        """#3 if the maximum value of count is greater than that of others, 
         there's no mean to get desirable results."""
 
         if loop - max_count < max_count - 1:
