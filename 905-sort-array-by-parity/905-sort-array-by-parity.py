@@ -18,7 +18,7 @@ class Solution(object):
                     )
                     # swap happens when odd is at the left end and even is at the right end
                     left_index += 1
-                right_index -= 1  # end index moves leaving odd integer intact
+                right_index -= 1  # right index moves toward left leaving odd integer intact
             else:
-                left_index += 1  #
+                left_index += 1  # left index moves leaving toward right while even number left.
         return nums
