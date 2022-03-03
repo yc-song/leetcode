@@ -34,7 +34,7 @@ class Solution:
         else:
             for i in range(len(s) - max_count):
                 max_idx = [i for i, value in enumerate(s) if value == s[0]]
-                # list of indices of maximum count value
+                # list of indices of maximum count value- time complexity increases here
                 if s[max_count + i] != s[max_idx[0]]:
                     s.insert(max_idx[i % max_count] + 1, s.pop(max_count + i))
                     # squeezing happens
