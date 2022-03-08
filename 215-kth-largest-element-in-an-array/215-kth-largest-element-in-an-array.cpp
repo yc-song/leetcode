@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 using std::swap;
-int findKthelement(vector<int>& nums, int k);
 int finder(vector<int>& nums, int start, int end, int k);
 int partition(vector<int>& nums, int start, int end);
 
