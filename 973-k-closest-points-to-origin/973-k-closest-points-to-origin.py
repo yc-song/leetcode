@@ -1,8 +1,8 @@
 class Solution:
     def kClosest(self, points: list[list[int]], k: int) -> List[List[int]]:
         distance_dict = dict()
-        ans = deque()
-        distance_list=deque()
+        ans = list()
+        distance_list=list()
         i = 0
         for point in points:
             distance=(point[0]) ** 2 + (point[1]) ** 2
@@ -10,16 +10,15 @@ class Solution:
             try:
                 distance_dict[distance].append(point)
             except:
-                distance_dict[distance] = deque([point])
+                distance_dict[distance] = [point]
             i += 1
-        distance_list=list(distance_list)
         kth_num=self.main_finder(distance_list, k)
         for key in distance_dict.keys():
             x = list(distance_dict[key])
             if key<=kth_num:
                 for j in range(len(x)):
                     ans.append(x[j])
-        return list(ans)
+        return ans
     
     def main_finder(self, nums: list, idx:int):
         idx-=1
