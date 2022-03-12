@@ -16,7 +16,7 @@ public:
         int c = 0;
         vector<int> ans= {};
         while (c<k) {
-            auto i = vec[c++];
+            pair<int, int> i = vec[c++];
             ans.push_back(i.first);
         }
         return ans;
