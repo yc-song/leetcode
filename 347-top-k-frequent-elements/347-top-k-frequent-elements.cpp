@@ -9,7 +9,6 @@ public:
 
     vector<int> topKFrequent(vector<int>& nums, int k) {
         map<int, int> counting;
-        map<int, int>::iterator iter;
         counter(counting, nums);
         vector<pair<int, int>> vec(counting.begin(), counting.end());
         sort(vec.begin(), vec.end(), cmp);
