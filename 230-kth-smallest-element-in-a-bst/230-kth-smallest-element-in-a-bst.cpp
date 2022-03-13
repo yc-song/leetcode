@@ -1,11 +1,12 @@
 class Solution {
 public:
-    int count = 1;
-    int x ;
+   
     int kthSmallest(TreeNode* root, int k) {
         __inorder(root,k);
         return this->x;
     }
+private:
+
     void __inorder(TreeNode* curnode, int k) {
             if (curnode != nullptr && count <= k) {
                 __inorder(curnode->left, k);
@@ -27,4 +28,6 @@ public:
         };
       
     }
+     int count = 1;
+    int x ;
 };
