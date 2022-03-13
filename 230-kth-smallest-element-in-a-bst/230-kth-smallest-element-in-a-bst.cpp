@@ -9,8 +9,8 @@ public:
     void __inorder(TreeNode* curnode, int k) {
             if (curnode != nullptr && count <= k) {
                 __inorder(curnode->left, k);
-                if (count <= k) visit(curnode, k); 
-                if (count <= k)    __inorder(curnode->right, k);
+                visit(curnode, k); 
+                __inorder(curnode->right, k);
 
             }
         
@@ -24,8 +24,6 @@ public:
         else if (count == k) {
             this->x = curnode->val;
             count++;
-
-            return;
         };
       
     }
