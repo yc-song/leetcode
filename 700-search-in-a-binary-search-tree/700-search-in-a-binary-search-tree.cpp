@@ -14,7 +14,7 @@
           else {
               if (root->val == val) {
                  *ans = TreeNode(val, root->left, root->right);
-                  return ans;
+        
               }
               else if (root->val < val) {
                   return searchBST(root->right, val);
