@@ -34,7 +34,7 @@ public:
 //private:
     int __traversal(TreeNode* curnode, int height) {
         if (curnode->left != nullptr && curnode->right != nullptr) {
-            ++height;
+            height++;
             int x = __traversal(curnode->left, height);
             int y = __traversal(curnode->right, height);
             return(std::max(x, y));
