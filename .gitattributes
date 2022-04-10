@@ -1,2 +1,2 @@
-** linguist-documentation=false
-** linguist-vendored=false
+*.sql linguist-vendored=false
+
